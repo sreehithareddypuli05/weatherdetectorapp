@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Weather Detector</title>
+  <link rel="stylesheet" href="{% static 'weather_app/style.css' %}" />
+</head>
+<body>
+  <div class="container">
+    <h1>Weather at Your Location</h1>
+
+    <button onclick="getWeather()">Detect My Weather</button>
+
+    <h2>Or enter your city manually:</h2>
+    <input type="text" id="cityInput" placeholder="Enter city name" />
+    <button onclick="getWeatherByCity()">Get Weather by City</button>
+
+    <div id="weatherResult"></div>
+  </div>
+
+  <script src="{% static 'weather_app/script.js' %}"></script>
+</body>
+</html>
